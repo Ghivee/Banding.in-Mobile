@@ -1,17 +1,30 @@
-# flutter_porjek_akhir
+# Banding.in
 
-A new Flutter project.
+A Flutter app for comparing secondhand item prices among university students: catalog, filters, chat and history, built on Firebase.
 
-## Getting Started
+[Bahasa Indonesia](README.id.md)
 
-This project is a starting point for a Flutter application.
+## Tech stack
 
-A few resources to get you started if this is your first Flutter project:
+Flutter, Firebase (Auth, Cloud Firestore, Storage), `image_picker`, `cached_network_image`.
 
-- [Learn Flutter](https://docs.flutter.dev/get-started/learn-flutter)
-- [Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Flutter learning resources](https://docs.flutter.dev/reference/learning-resources)
+## Getting started
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+```bash
+flutter pub get
+```
+
+Set up a Firebase project and add your own `google-services.json` (Android) and `GoogleService-Info.plist` (iOS); they are not committed to this repository. Firestore security rules are in `firestore.rules`, and storage rules are in `storage.rules`.
+
+```bash
+flutter run
+```
+
+## Project structure
+
+```
+lib/screens/    login, register, main screen
+lib/tabs/       comparison, dashboard, profile tabs
+lib/services/   Firebase access
+lib/models/     data models
+```
